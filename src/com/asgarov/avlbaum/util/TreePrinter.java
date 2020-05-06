@@ -6,6 +6,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TreePrinter {
+
+    /**
+     * Prints the tree
+     * @param root
+     */
     public static void displayTree(Node root) {
         StringBuilder sb = new StringBuilder();
         List<List<String>> lines = new ArrayList<>();

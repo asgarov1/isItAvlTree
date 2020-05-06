@@ -11,9 +11,30 @@ public class Node {
     private Node left;
     private Node right;
 
+
+    /**
+     * Constructor
+     * @param value
+     */
     public Node(int value) {
         this.value = value;
     }
+
+
+    /**
+     * Convernience method that takes left and right nodes and returns them as children
+     * @return list of nodes containing left and right nodes
+     */
+    public List<Node> getChildren() {
+        List<Node> children = new ArrayList<>();
+        children.add(left);
+        children.add(right);
+        return children;
+    }
+
+    /**
+     * Getters and Setters
+     */
 
     public int getBalanceFactor() {
         return balanceFactor;
@@ -53,17 +74,5 @@ public class Node {
 
     public void setRight(Node right) {
         this.right = right;
-    }
-
-    public List<Node> getChildren() {
-        List<Node> children = new ArrayList<>();
-        children.add(left);
-        children.add(right);
-        return children;
-    }
-
-    @Override
-    public String toString() {
-        return "" + value;
     }
 }
