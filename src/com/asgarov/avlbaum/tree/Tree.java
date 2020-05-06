@@ -162,7 +162,7 @@ public class Tree {
     /**
      * recursive method that traverses the tree and keeps adding the nodes to the list which is a second parameter
      * @param node starting node
-     * @param listOfNodes list of nodes to which each node will be adde
+     * @param listOfNodes list of nodes to which each node will be added
      */
     private void addAllNodes(Node node, List<Node> listOfNodes) {
         if (node != null) {

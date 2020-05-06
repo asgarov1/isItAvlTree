@@ -8,13 +8,12 @@ import java.util.stream.Collectors;
 
 public class FileReader {
     /**
-     * Utility method that reads the file from resources
+     * Utility method that reads the file
      * @param fileName
      * @return list of lines read from the file
      * @throws IOException
      */
     public static List<String> readFile(String fileName) throws IOException {
-        String pathToFile = "src/resources/" + fileName;
-        return Files.lines(Paths.get(pathToFile)).collect(Collectors.toList());
+        return Files.lines(Paths.get(fileName)).collect(Collectors.toList());
     }
 }
