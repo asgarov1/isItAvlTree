@@ -1,0 +1,3 @@
+javac com/asgarov/avlbaum/Main.java
+
+java com/asgarov/avlbaum/Main "$1"

@@ -2,7 +2,6 @@ package com.asgarov.avlbaum;
 
 import com.asgarov.avlbaum.tree.Tree;
 import com.asgarov.avlbaum.util.FileReader;
-import com.asgarov.avlbaum.util.TreePrinter;
 
 import java.io.IOException;
 import java.util.List;
