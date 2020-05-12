@@ -27,8 +27,5 @@ public class Main {
         tree.displayBalanceFactor(tree.getRoot());
         System.out.println("AVL: " + (tree.isAVL(tree.getRoot()) ? "yes" : "no"));
         System.out.println("min: " + tree.findMin() + ", max: " + tree.findMax() + ", avg: " + tree.findAverage());
-
-        System.out.println();
-        TreePrinter.displayTree(tree.getRoot());
     }
 }
