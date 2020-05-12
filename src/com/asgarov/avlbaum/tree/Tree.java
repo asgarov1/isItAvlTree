@@ -84,13 +84,19 @@ public class Tree {
     }
 
     /**
-     * using the findAllNodes() function it runs through the stream to determine whether any node has |balanceFactor| >= 2
+     * recursively traverses down the tree to determine whether any node has |balanceFactor| >= 2
      * if yes returns false, otherwise true
+     * Efficiency is worst case scenario O(n) but if ever the AVL violation is found then it gets out of recursion
+     * without going any deeper
      *
      * @return boolean that states whether the tree is AVL or not
      */
-    public boolean isAVL() {
-        return findAllNodes().stream().noneMatch(node -> Math.abs(node.getBalanceFactor()) >= 2);
+    public boolean isAVL(Node node) {
+        if(node == null) {
+            return true;
+        } else {
+            return Math.abs(node.getBalanceFactor())<2 && isAVL(node.getRight()) && isAVL(node.getLeft());
+        }
     }
 
     /**
